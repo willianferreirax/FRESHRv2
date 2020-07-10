@@ -1,0 +1,46 @@
+  /*Resetando os valores do CSS*/
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    outline: none;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+
+
+  li{
+    list-style: none;
+  }
+
+  a{
+    color: #02f8d1;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+
+  body{
+    background-color: #18191B !important;
+  }
+
+  .nav{
+    background-color: #18191B;
+  }
+
+  .search{
+    background-color: #0e0d0f;
+  }
+
+  #chec{
+    display: none;
+  }
+
+  #dropcheck{
+    display: none;
+  }
+
+  #searchcheck{
+    display: none;
+  }

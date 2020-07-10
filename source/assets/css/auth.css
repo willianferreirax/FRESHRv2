@@ -1,0 +1,1159 @@
+.cadastraruser{
+  background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  width: 300px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  height: 70px;
+}
+.cadastraraltinst{
+  background: transparent;
+  width: 300px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 3px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  height: 70px;
+}
+
+.back{
+  background: transparent;
+  width: 30vh;
+  border-radius: 20vh;
+  border: 3px solid white;
+  color: white;
+  font-size: 3vh;
+  font-weight: 400;
+  height: 6vh;
+}
+
+.cadastrar{
+	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+	width: 30vh;
+	margin: 0.5vh;
+	border-radius: 20vh;
+	border: none;
+	color: white;
+	font-size: 3vh;
+	font-weight: 400;
+	height: 6vh;
+}
+/* CSS para os desktops, laptops e tablets*/
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+	
+	.labelint{
+		font-size: 2.5vh !important;
+	}
+	
+	.selectestado{
+		background-color: #202124;
+		border-style: none;
+		border-radius: 15vh;
+		width: 40vh;
+		height: 5vh;
+		font-size: 1.6vh;
+	}
+	
+  /*Estilos das páginas de login e cadastro do usuário/instituição*/
+
+  .cadastrarint{
+  	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  	width: 30vh;
+  	margin: 0.5vh;
+    margin-top: 6vw;
+  	border-radius: 20vh;
+  	border: none;
+  	color: white;
+  	font-size: 3vh;
+  	font-weight: 400;
+  	height: 6vh;
+  }
+
+  .outro{
+		font-size: 1.4vw !important;
+		background-color: transparent !important;
+		text-align: center;
+		border-bottom: 0.17vw solid white;
+		border-radius: 0;
+		width: 0%;
+		color: white;
+    transition: width 0.1s;
+    -webkit-transition: width 0.1s;
+	}
+
+	#bti15:checked ~ .interesse15 .outro{
+		width: 91%;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+	}
+
+	#bti15:checked ~ .interesse15{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti14:checked ~ .interesse14{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti13:checked ~ .interesse13{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti12:checked ~ .interesse12{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti11:checked ~ .interesse11{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti10:checked ~ .interesse10{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti9:checked ~ .interesse9{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti8:checked ~ .interesse8{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti7:checked ~ .interesse7{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti6:checked ~ .interesse6{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti5:checked ~ .interesse5{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti4:checked ~ .interesse4{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti3:checked ~ .interesse3{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti2:checked ~ .interesse2{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti1:checked ~ .interesse1{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti1, #bti2, #bti3, #bti4, #bti5, #bti6, #bti7, #bti8, #bti9, #bti10, #bti11, #bti12, #bti13, #bti14, #bti15{
+		display: none;
+	}
+
+  #exampleFormControlFile1{
+	  width: 30vw;
+	  font-size: 1vw;
+  }
+
+  .imagevis{
+    background: url(../images/imgupl.jpg) no-repeat;
+    background-size: cover;
+    height: 50vw;
+    width: 30vw;
+    border-radius: 2vh;
+    background-position: center;
+    transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+  }
+
+	.imagevis:hover {
+		cursor: pointer;
+		box-shadow: 0 0 1.5vh white;
+
+	}
+
+  #imageup{
+    position: absolute;
+    margin-left: 50.8vw;
+		margin-right: 9.2vw;
+  }
+
+  .labelintere{
+  font-size: 1.4vw;
+	margin-top: 2vw;
+	margin-right: 1vw;
+	white-space: nowrap;
+  }
+
+  .prox{
+    background: transparent;
+    width: 12vw;
+    margin: 5vh 2vh 6vh 2vh;
+    border-radius: 20vh;
+    border: 0.5vh solid white;
+    color: white;
+    font-size: 1.4vw;
+    font-weight: 400;
+    left: 79vw !important;
+    position: absolute;
+    height: 6vh;
+
+  }
+
+  .interesse15{
+    background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+
+  }
+
+  .interesse14{
+    background: url(../images/mus.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse13{
+    background: url(../images/fil.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse12{
+    background: url(../images/cie.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse11{
+    background: url(../images/gast.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse10{
+    background: url(../images/tur.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse9{
+    background: url(../images/edu.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse8{
+    background: url(../images/law.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse7{
+    background: url(../images/art.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse6{
+    background: url(../images/com.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse5{
+    background: url(../images/adm.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse4{
+    background: url(../images/engineering.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse3{
+    background: url(../images/health.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse2{
+    background: url(../images/logistica.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse1{
+    background: url(../images/info.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse1, .interesse2, .interesse3, .interesse4, .interesse5, .interesse6, .interesse7, .interesse8, .interesse9, .interesse10, .interesse11, .interesse12, .interesse13, .interesse14, .interesse15{
+    background-color: white;
+    color: white;
+    font-size: 1.5vw;
+    padding-top: 4vw;
+    border-radius: 3vh;
+    margin: 0.5vh;
+		cursor: pointer;
+		transition: text-shadow 0.8s;
+		transition: border 0.3s ease;
+  }
+
+  .interesses{
+    margin-top: 1vw;
+    display: grid;
+    grid-template-rows: 10vw 10vw 10vw 10vw 10vw;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "interesse1 interesse2 interesse3" "interesse4 interesse5 interesse6" "interesse7 interesse8 interesse9" "interesse10 interesse11 interesse12" "interesse13 interesse14 interesse15";
+  }
+
+  label{
+    font-size: 2.5vh;
+  }
+
+  hr{
+    background-color: #6f6f6f;
+    width: 100%;
+  }
+
+  .cabecalho{
+    width: 100vh;
+    padding: 3vh 8vh 0 8vh;
+  }
+
+  .logo{
+    width: 15vh;
+    height: 26vh;
+    background: url(../images/logocomescrito.png) center center/15vh no-repeat;
+    font-size: 0;
+  }
+
+  .erro{
+    color: #c73838 !important;
+    font-size: 1.1vw;
+  }
+
+  input{
+    background-color: #202124;
+    margin: 1vh !important;
+    width: 40vh;
+    text-align: center;
+    font-size: 2vh !important;
+    height: 6vh !important;
+    border-radius: 25vh;
+    border: none;
+  }
+
+  input:focus{
+    border-radius: 3vh 3vh 0 0 !important;
+  }
+
+  .titleheader{
+    font-size: 30px;
+    font-family: 'Poppins' !important;
+    text-decoration: none;
+  }
+
+  .containerform{
+    height: 50vh;
+    background-color: inherit;
+    text-align: center;
+  }
+
+  form{
+    width: 100%;
+    background-color: inherit;
+  }
+
+  .aindan{
+    font-size: 2vh;
+  }
+}
+
+@media only screen and (min-width: 700px) and (orientation: portrait)  {
+	
+   .labelint{
+		font-size: 2.5vh !important;
+	}
+	
+	.selectestado{
+		background-color: #202124;
+		border-style: none;
+		border-radius: 15vh;
+		width: 40vh;
+		height: 5vh;
+		font-size: 1.6vh;
+	}
+	
+  /*Estilos das páginas de login e cadastro do usuário/instituição*/
+
+  .cadastrarint{
+  	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  	width: 30vh;
+  	margin: 0.5vh;
+    margin-top: 6vw;
+  	border-radius: 20vh;
+  	border: none;
+  	color: white;
+  	font-size: 3vh;
+  	font-weight: 400;
+  	height: 6vh;
+  }
+
+  .outro{
+		font-size: 4vw !important;
+		background-color: transparent !important;
+		text-align: center;
+		border-bottom: 0.17vw solid white;
+		border-radius: 0;
+		width: 0%;
+		color: white;
+    transition: width 0.1s;
+    -webkit-transition: width 0.1s;
+	}
+
+	#bti15:checked ~ .interesse15 .outro{
+		width: 91%;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+	}
+
+	#bti15:checked ~ .interesse15{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti14:checked ~ .interesse14{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti13:checked ~ .interesse13{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti12:checked ~ .interesse12{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti11:checked ~ .interesse11{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti10:checked ~ .interesse10{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti9:checked ~ .interesse9{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti8:checked ~ .interesse8{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti7:checked ~ .interesse7{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti6:checked ~ .interesse6{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti5:checked ~ .interesse5{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti4:checked ~ .interesse4{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti3:checked ~ .interesse3{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti2:checked ~ .interesse2{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti1:checked ~ .interesse1{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti1, #bti2, #bti3, #bti4, #bti5, #bti6, #bti7, #bti8, #bti9, #bti10, #bti11, #bti12, #bti13, #bti14, #bti15{
+		display: none;
+	}
+
+  #exampleFormControlFile1{
+	  width: 30vw;
+	  font-size: 1vw;
+  }
+
+  .imagevis{
+    background: url(../images/imgupl.jpg) no-repeat;
+    background-size: cover;
+    height: 50vw;
+    width: 30vw;
+    border-radius: 2vh;
+    background-position: center;
+    transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+  }
+
+	.imagevis:hover {
+		cursor: pointer;
+		box-shadow: 0 0 1.5vh white;
+
+	}
+
+  #imageup{
+    position: absolute;
+    margin-left: 50.8vw;
+		margin-right: 9.2vw;
+  }
+
+  .labelintere{
+  font-size: 5vw;
+	margin-top: 2vw;
+	margin-right: 1vw;
+	white-space: nowrap;
+  }
+
+  .prox{
+    background: transparent;
+    width: 12vw;
+    margin: 5vh 2vh 6vh 2vh;
+    border-radius: 20vh;
+    border: 0.5vh solid white;
+    color: white;
+    font-size: 1.4vw;
+    font-weight: 400;
+    left: 79vw !important;
+    position: absolute;
+    height: 6vh;
+
+  }
+
+  .interesse15{
+    background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+
+  }
+
+  .interesse14{
+    background: url(../images/mus.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse13{
+    background: url(../images/fil.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse12{
+    background: url(../images/cie.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse11{
+    background: url(../images/gast.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse10{
+    background: url(../images/tur.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse9{
+    background: url(../images/edu.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse8{
+    background: url(../images/law.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse7{
+    background: url(../images/art.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse6{
+    background: url(../images/com.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse5{
+    background: url(../images/adm.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse4{
+    background: url(../images/engineering.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse3{
+    background: url(../images/health.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse2{
+    background: url(../images/logistica.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse1{
+    background: url(../images/info.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1.7vw !important;
+  }
+
+  .interesse1, .interesse2, .interesse3, .interesse4, .interesse5, .interesse6, .interesse7, .interesse8, .interesse9, .interesse10, .interesse11, .interesse12, .interesse13, .interesse14, .interesse15{
+    background-color: white;
+    color: white;
+    font-size: 3.8vw;
+    padding-top: 4vw;
+    border-radius: 3vh;
+    margin: 0.5vh;
+		cursor: pointer;
+		transition: text-shadow 0.8s;
+		transition: border 0.3s ease;
+  }
+
+  .interesses{
+    margin-top: 1vw;
+    display: grid;
+    grid-template-rows: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "interesse1 interesse2 interesse3" "interesse4 interesse5 interesse6" "interesse7 interesse8 interesse9" "interesse10 interesse11 interesse12" "interesse13 interesse14 interesse15";
+  }
+
+  label{
+    font-size: 2.5vh;
+  }
+
+  hr{
+    background-color: #6f6f6f;
+    width: 100%;
+  }
+
+  .cabecalho{
+    width: 100vh;
+    padding: 3vh 8vh 0 8vh;
+  }
+
+  .logo{
+    width: 15vh;
+    height: 26vh;
+    background: url(../images/logocomescrito.png) center center/15vh no-repeat;
+    font-size: 0;
+  }
+
+  .erro{
+    color: #c73838 !important;
+    font-size: 3vw;
+  }
+
+  input{
+    background-color: #202124;
+    margin: 1vh !important;
+    width: 40vh;
+    text-align: center;
+    font-size: 2vh !important;
+    height: 6vh !important;
+    border-radius: 25vh;
+    border: none;
+  }
+
+  input:focus{
+    border-radius: 3vh 3vh 0 0 !important;
+  }
+
+  .titleheader{
+    font-size: 30px;
+    font-family: 'Poppins' !important;
+    text-decoration: none;
+  }
+
+  .containerform{
+    width: 100vh;
+    height: 50vh;
+    background-color: inherit;
+    text-align: center;
+  }
+
+  form{
+    width: 100%;
+    background-color: inherit;
+  }
+
+  .aindan{
+    font-size: 2vh;
+  }
+}
+
+/* CSS para celulares grandes*/
+@media screen and (max-width: 699px) {
+	
+   .labelint{
+		font-size: 5vh !important;
+	}
+	
+	.selectestado{
+		background-color: #202124;
+		border-style: none;
+		border-radius: 15vh;
+		width: 70vh;
+		height: 10vh;
+		font-size: 3vh;
+	}
+	
+  .cadastrarint{
+  	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  	width: 30vh;
+  	margin: 0.5vh;
+    margin-top: 12vw;
+  	border-radius: 20vh;
+  	border: none;
+  	color: white;
+  	font-size: 3vh;
+  	font-weight: 400;
+  	height: 6vh;
+  }
+
+  .outro{
+		font-size: 5vw !important;
+		background-color: transparent !important;
+		text-align: center;
+		border-bottom: 0.17vw solid white;
+		border-radius: 0;
+		width: 0%;
+		color: white;
+    transition: width 0.1s;
+    -webkit-transition: width 0.1s;
+	}
+
+	#bti15:checked ~ .interesse15 .outro{
+		width: 91%;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+	}
+
+	#bti15:checked ~ .interesse15{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti14:checked ~ .interesse14{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti13:checked ~ .interesse13{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti12:checked ~ .interesse12{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti11:checked ~ .interesse11{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti10:checked ~ .interesse10{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti9:checked ~ .interesse9{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti8:checked ~ .interesse8{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti7:checked ~ .interesse7{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti6:checked ~ .interesse6{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti5:checked ~ .interesse5{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti4:checked ~ .interesse4{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti3:checked ~ .interesse3{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti2:checked ~ .interesse2{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti1:checked ~ .interesse1{
+		text-shadow: 0px 0px 1.5vh white;
+    color: #c4c4c4;
+		border-style: groove;
+	}
+
+	#bti1, #bti2, #bti3, #bti4, #bti5, #bti6, #bti7, #bti8, #bti9, #bti10, #bti11, #bti12, #bti13, #bti14, #bti15{
+		display: none;
+	}
+
+  #exampleFormControlFile1{
+	  width: 30vw;
+	  font-size: 1vw;
+  }
+
+  .imagevis{
+    background: url(../images/imgupl.jpg) no-repeat;
+    background-size: cover;
+    height: 50vw;
+    width: 30vw;
+    border-radius: 2vh;
+    background-position: center;
+    transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+  }
+
+	.imagevis:hover {
+		cursor: pointer;
+		box-shadow: 0 0 1.5vh white;
+
+	}
+
+  #imageup{
+    position: absolute;
+    margin-left: 50.8vw;
+		margin-right: 9.2vw;
+  }
+
+  .labelintere{
+  font-size: 5vw;
+	margin-top: 2vw;
+	margin-right: 1vw;
+	white-space: nowrap;
+  }
+
+  .prox{
+    background: transparent;
+    width: 12vw;
+    margin: 5vh 2vh 6vh 2vh;
+    border-radius: 20vh;
+    border: 0.5vh solid white;
+    color: white;
+    font-size: 1.4vw;
+    font-weight: 400;
+    left: 79vw !important;
+    position: absolute;
+    height: 6vh;
+
+  }
+
+  .interesse15{
+    background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+
+  }
+
+  .interesse14{
+    background: url(../images/mus.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse13{
+    background: url(../images/fil.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 8vw !important;
+  }
+
+  .interesse12{
+    background: url(../images/cie.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 8vw !important;
+  }
+
+  .interesse11{
+    background: url(../images/gast.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse10{
+    background: url(../images/tur.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse9{
+    background: url(../images/edu.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse8{
+    background: url(../images/law.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse7{
+    background: url(../images/art.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse6{
+    background: url(../images/com.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse5{
+    background: url(../images/adm.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 8vw !important;
+  }
+
+  .interesse4{
+    background: url(../images/engineering.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse3{
+    background: url(../images/health.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse2{
+    background: url(../images/logistica.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .interesse1{
+    background: url(../images/info.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 8vw !important;
+  }
+
+  .interesse1, .interesse2, .interesse3, .interesse4, .interesse5, .interesse6, .interesse7, .interesse8, .interesse9, .interesse10, .interesse11, .interesse12, .interesse13, .interesse14, .interesse15{
+    background-color: white;
+    color: white;
+    font-size: 3.7vw;
+    font-weight: 700;
+    padding-top: 8vw;
+    border-radius: 3vh;
+    margin: 0.5vh;
+		cursor: pointer;
+		transition: text-shadow 0.8s;
+		transition: border 0.3s ease;
+  }
+
+  .interesses{
+    margin-top: 1vw;
+    display: grid;
+    grid-template-rows: 30vw 30vw 30vw 30vw 30vw;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "interesse1 interesse2 interesse3" "interesse4 interesse5 interesse6" "interesse7 interesse8 interesse9" "interesse10 interesse11 interesse12" "interesse13 interesse14 interesse15";
+  }
+
+  .cabecalho{
+    width: 100vh;
+    padding: 4vh 10vh 0 10vh;
+  }
+
+  .logo{
+    width: 21vh;
+    height: 34vh;
+    background: url(../images/logocomescrito.png) center center/20vh no-repeat;
+    font-size: 0;
+  }
+
+  hr{
+    background-color: #2f2f2f;
+    width: 80vh;
+  }
+
+  .erro{
+    color: #c73838 !important;
+    font-size: 5vw;
+  }
+
+  input{
+    background-color: #202124;
+    margin: 3px !important;
+    width: 70vh;
+    text-align: center;
+    font-size: 4.5vh !important;
+    height: 10vh; !important;
+    border-radius: 25px;
+    border: none;
+  }
+
+  .titleheader{
+    font-size: 25px;
+    font-family: 'Poppins' !important;
+    text-decoration: none;
+  }
+
+  .containerform{
+    width: 100vh;
+    padding: 1vh 1vh 1vh 1vh;
+    background-color: inherit;
+    text-align: center;
+  }
+
+  .aindan{
+    font-size: 4vh;
+  }
+
+  label{
+    font-size: 5vh;
+  }
+
+  .cadastrar{
+  	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  	width: 45vh;
+  	margin: 10vh;
+  	border-radius: 20vh;
+  	border: none;
+  	color: white;
+  	font-size: 5vh;
+  	font-weight: 400;
+  	height: 9vh;
+  }
+
+  form{
+    width: 100%;
+    font-size: 100%;
+  }
+}

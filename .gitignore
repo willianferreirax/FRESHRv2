@@ -1,0 +1,4 @@
+vendor/
+*.txt
+exemples/
+.vscode/

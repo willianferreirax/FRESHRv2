@@ -1,0 +1,187 @@
+.cadastraruser{
+  background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  width: 300px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  height: 70px;
+}
+.cadastraraltinst{
+  background: transparent;
+  width: 300px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 3px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  height: 70px;
+}
+
+.cadastrar{
+	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+	width: 30vh;
+	margin: 0.5vh;
+	border-radius: 20vh;
+	border: none;
+	color: white;
+	font-size: 3vh;
+	font-weight: 400;
+	height: 6vh;
+}
+
+/* CSS para os desktops, laptops e tablets*/
+@media screen and (min-width: 700px) {
+
+  /*Estilos das páginas de login e cadastro do usuário/instituição*/
+
+  .sair{
+    color: red;
+    font-size: 2vh;
+  }
+
+  label{
+    font-size: 2.5vh;
+  }
+
+  hr{
+    background-color: #6f6f6f;
+    width: 100%;
+  }
+
+  .cabecalho{
+    width: 100vh;
+    padding: 3vh 8vh 0 8vh;
+  }
+
+  .logo{
+    width: 15vh;
+    height: 26vh;
+    background: url(../images/logocomescrito.png) center center/15vh no-repeat;
+    font-size: 0;
+  }
+
+  .erro{
+    color: #c73838 !important;
+    font-size: 15px;
+  }
+
+  input{
+    background-color: #202124;
+    margin: 1vh !important;
+    width: 40vh;
+    text-align: center;
+    font-size: 2vh !important;
+    height: 6vh !important;
+    border-radius: 25vh;
+    border: none;
+  }
+
+  input:focus{
+    border-radius: 3vh 3vh 0 0 !important;
+  }
+
+  .titleheader{
+    font-size: 30px;
+    font-family: 'Poppins' !important;
+    text-decoration: none;
+  }
+
+  .containerform{
+    width: 100vh;
+    height: 50vh;
+    background-color: inherit;
+    text-align: center;
+  }
+
+  form{
+    width: 100%;
+    background-color: inherit;
+  }
+
+  .aindan{
+    font-size: 2vh;
+  }
+}
+/* CSS para celulares grandes*/
+@media screen and (max-width: 699px) {
+
+  .sair{
+    color: red;
+    font-size: 3vh;
+  }
+
+  .cabecalho{
+    width: 100vh;
+    padding: 4vh 10vh 0 10vh;
+  }
+
+  .logo{
+    width: 21vh;
+    height: 34vh;
+    background: url(../images/logocomescrito.png) center center/20vh no-repeat;
+    font-size: 0;
+  }
+
+  hr{
+    background-color: #2f2f2f;
+    width: 80vh;
+  }
+
+  .erro{
+    color: #c73838 !important;
+    font-size: 15px;
+  }
+
+  input{
+    background-color: #202124;
+    margin: 3px !important;
+    width: 70vh;
+    text-align: center;
+    font-size: 4.5vh !important;
+    height: 10vh; !important;
+    border-radius: 25px;
+    border: none;
+  }
+
+  .titleheader{
+    font-size: 25px;
+    font-family: 'Poppins' !important;
+    text-decoration: none;
+  }
+
+  .containerform{
+    width: 100vh;
+    padding: 1vh 1vh 1vh 1vh;
+    background-color: inherit;
+    text-align: center;
+  }
+
+  .aindan{
+    font-size: 4vh;
+  }
+
+  label{
+    font-size: 4vh;
+  }
+
+  .cadastrar{
+  	background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  	width: 45vh;
+  	margin: 10vh;
+  	border-radius: 20vh;
+  	border: none;
+  	color: white;
+  	font-size: 5vh;
+  	font-weight: 400;
+  	height: 9vh;
+  }
+
+  form{
+    width: 100%;
+    font-size: 100%;
+  }
+}

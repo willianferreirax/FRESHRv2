@@ -1,0 +1,39 @@
+{
+    "name":"willianferreira/freshr_vs",
+    "description": "Aplicando MVC ao projeto",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name":"Willian Ferreira dos Santos",
+            "email": "willian1948@hotmail.com",
+            "role": "developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\":"source/",
+            "Model\\":"source/model"
+        },
+        "files": [
+            "config.php",
+            "source/Helpers.php"
+        ]
+    },
+    "require": {
+        "coffeecode/router": "^1.0",
+        "coffeecode/datalayer":"^1.0",
+        "coffeecode/paginator":"^1.0",
+        "squizlabs/php_codesniffer": "3.*",
+        "coffeecode/optimizer":"2.0.0",
+        "phpmailer/phpmailer":"6.*",
+        "league/oauth2-facebook":"2.*",
+        "league/oauth2-google":"3.*",
+        "league/plates":"v4.0.0-alpha",
+        "matthiasmullie/minify":"1.3.*"
+    }
+
+}

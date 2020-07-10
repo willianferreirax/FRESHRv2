@@ -1,0 +1,386 @@
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+
+  .statsdiv{
+    padding-bottom: 3vw;
+  }
+
+  .avisoevent{
+    font-size: 1.7vw;
+    opacity: 0.5;
+  }
+
+
+  .searchinfo{
+    display: grid;
+    grid-template-columns: 40% 39% 20%;
+    grid-template-areas: "imagemres" "nomeres" "precores";
+    width: 89vw;
+    height: 15vw;
+    border-radius: 2vw;
+    background-color: #0d0e0f;
+  }
+
+  .searchinfo:hover {
+    background-color: #0f1112;
+  }
+
+  .searchinfo:hover .imagemres{
+    opacity: 0.7;
+  }
+
+  .searchinfo:hover .nomeres{
+    font-size: 2.4vw;
+  }
+
+  .imagemres{
+    width: 35.595vw;
+    height: 15vw;
+    text-align: left;
+    margin: 0 0 0 0;
+    border-radius: 2vw 0 0 2vw;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    object-fit: cover;
+  }
+
+  .nomeres{
+    display: block;
+    max-width: 57vw;
+    text-align: left;
+    padding: 0.4vw 1vw 0vw 0.4vw;
+    font-size: 2.5vw;
+    transition: font-size 0.2s;
+    -webkit-transition: font-size 0.2s;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+  }
+
+  h1{
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .descres{
+    font-size: 1.4vw;
+    padding: 0vw 0 0 0.2vw;
+    white-space: normal;
+  }
+
+  .enderes{
+    opacity: 0.7;
+    font-size: 1.2vw;
+    padding-left: 0.1vw;
+  }
+
+  .precores{
+    padding: 0.7vw 1vw 1vw 0vw;
+    text-align: right;
+    font-size: 1.7vw;
+  }
+
+  .elem1{
+    padding-bottom: 1vw;
+    text-align: left;
+  }
+
+  .b3{
+    border-right: 0.5vh solid !important;
+    border-image: linear-gradient(to bottom, #C40EFA, #0096C4) 1 100% !important;
+  }
+
+  .seguir{
+    background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+    width: 30vh;
+    border-radius: 20vw;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0vw !important;
+    font-weight: 400;
+    height: 3vw;
+    text-align: center;
+  }
+  #followicon{
+    padding: 0vw !important;
+    margin: 0vw 0vw 0vw 1vw !important;
+    font-size: 1.5vw;
+  }
+  .seguidores{
+    font-size: 1vw;
+    font-weight: 700;
+  }
+
+  .deixardeseguir{
+    background: transparent;
+    width: 30vh;
+    border-radius: 20vw;
+    border: 0.5vh solid white;
+    color: white;
+    font-size: 1.3vw;
+    padding: 0vw !important;
+    font-weight: 400;
+    height: 3vw;
+    text-align: center;
+  }
+
+}
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+
+  .statsdiv{
+    padding-bottom: 3vw;
+  }
+
+  .avisoevent{
+    font-size: 2.2vw;
+    opacity: 0.5;
+  }
+
+  .searchinfo{
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+    grid-template-areas: "imagemres" "nomeres" "precores";
+    width: 86vw;
+    height: 30vw;
+    border-radius: 2vw;
+    background-color: #0d0e0f;
+  }
+
+  .searchinfo:hover {
+    background-color: #0f1112;
+  }
+
+  .searchinfo:hover .imagemres{
+    opacity: 0.7;
+  }
+
+  .searchinfo:hover .nomeres{
+    font-size: 3.2vw;
+  }
+
+  .imagemres{
+    width: 40vw;
+    height: 30vw;
+    text-align: left;
+    margin: 0 12vw 0 0;
+    border-radius: 2vw;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    object-fit: cover;
+  }
+
+  .nomeres{
+    margin-left: 9vw;
+    display: block;
+    max-width: 57vw;
+    text-align: left;
+    padding: 1vw 1vw 1vw 1vw;
+    font-size: 3vw;
+    transition: font-size 0.2s;
+    -webkit-transition: font-size 0.2s;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+  }
+
+  h1{
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .descres{
+    font-size: 2vw;
+    padding: 0vw 0 0 5vw;
+    white-space: normal;
+  }
+
+  .enderes{
+    font-size: 2vw;
+    padding-left: 2.5vw;
+    opacity: 0.7;
+  }
+
+  .precores{
+    padding: 1vw 1vw 1vw 0vw;
+    text-align: right;
+    font-size: 2vw;
+  }
+
+  .elem1{
+    padding-bottom: 3vh !important;
+  }
+
+  .b3{
+    border-right: 0.5vh solid !important;
+    border-image: linear-gradient(to bottom, #C40EFA, #0096C4) 1 100% !important;
+  }
+  .seguir{
+    background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+    width: 20vw;
+    border-radius: 20vw;
+    border: none;
+    color: white;
+    font-size: 2vw;
+    padding: 0vw !important;
+    font-weight: 400;
+    height: 6vw;
+    text-align: center;
+  }
+  #followicon{
+    padding: 0vw !important;
+    margin: 0vw 0vw 0vw 1vw !important;
+    font-size: 2vw;
+  }
+  .seguidores{
+    font-size: 2.7vw;
+    font-weight: 700;
+  }
+
+  .deixardeseguir{
+    background: transparent;
+    width: 30vw;
+    border-radius: 20vw;
+    border: 0.5vh solid white;
+    color: white;
+    font-size: 3vw;
+    padding: 0vw !important;
+    font-weight: 400;
+    height: 6vw;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 699px) {
+
+  .statsdiv{
+    padding-bottom: 3vw;
+  }
+
+  .avisoevent{
+    font-size: 2.8vw;
+    opacity: 0.5;
+  }
+
+  .searchinfo{
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+    grid-template-areas: "imagemres" "nomeres" "precores";
+    width: 86vw;
+    height: 30vw;
+    border-radius: 2vw;
+    background-color: #0d0e0f;
+    margin-left: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .searchinfo:hover {
+    background-color: #0f1112;
+  }
+
+  .searchinfo:hover .imagemres{
+    opacity: 0.7;
+  }
+
+  .searchinfo:hover .nomeres{
+    font-size: 3.2vw;
+  }
+
+  .imagemres{
+    width: 40vw;
+    height: 30vw;
+    text-align: left;
+    margin: 0 12vw 0 0;
+    border-radius: 2vw;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    object-fit: cover;
+  }
+
+  .nomeres{
+    margin-left: 9vw;
+    display: block;
+    max-width: 57vw;
+    text-align: left;
+    padding: 1vw 1vw 0vw 1vw;
+    font-size: 3vw;
+    transition: font-size 0.2s;
+    -webkit-transition: font-size 0.2s;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+  }
+
+  h1{
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .descres{
+    font-size: 1.7vw;
+    padding-left: 5vw;
+    white-space: normal;
+  }
+
+  .enderes{
+    font-size: 1.7vw;
+    padding-left: 2.5vw;
+    opacity: 0.7;
+  }
+
+  .precores{
+    padding: 1vw 1vw 1vw 0vw;
+    text-align: right;
+    font-size: 2vw;
+  }
+
+  .elem1{
+    padding-bottom: 2vh !important;
+  }
+
+  .b3{
+    border-right: 0.5vh solid !important;
+    border-image: linear-gradient(to bottom, #C40EFA, #0096C4) 1 100% !important;
+  }
+
+  .seguir{
+    background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+    width: 20vw;
+    border-radius: 20vw;
+    border: none;
+    color: white;
+    font-size: 3vw;
+    padding: 0vw !important;
+    font-weight: 400;
+    height: 6vw;
+    text-align: center;
+  }
+  #followicon{
+    padding: 0vw !important;
+    margin: 0vw 0vw 0vw 1vw !important;
+    font-size: 2.7vw;
+  }
+  .seguidores{
+    font-size: 3vw;
+    font-weight: 700;
+  }
+
+  .deixardeseguir{
+    background: transparent;
+    width: 31vw;
+    border-radius: 20vw;
+    border: 0.5vh solid white;
+    color: white;
+    font-size: 3vw;
+    padding: 0vw !important;
+    font-weight: 400;
+    height: 7vw;
+    text-align: center;
+  }
+
+}

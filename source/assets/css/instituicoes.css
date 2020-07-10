@@ -1,0 +1,30 @@
+.b3{
+  border-right: 0.5vh solid;
+  border-image: linear-gradient(to bottom, #C40EFA, #0096C4) 1 100%;
+}
+
+.b2{
+  border: none !important;
+}
+
+@media only screen and (min-width: 700px) and (orientation: landscape) {
+  .elem1{
+    padding-top: 11vh !important;
+    padding-left: 30vw !important;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+  .elem1{
+    border-radius: 10vw 10vw 0 0 !important;
+  }
+}
+
+@media only screen and (max-width: 699px) and (orientation: portrait) {
+  .elem1{
+		border-radius: 10vw 10vw 0 0 !important;
+		padding-top: 5vw !important;
+	}
+}
+

@@ -1,0 +1,135 @@
+.cadastraruser{
+  background-image: linear-gradient(to bottom right, #C40EFA, #0096C4);
+  width: 50vh;
+  margin: 10px;
+  border-radius: 50vh;
+  border: none;
+  color: white;
+  font-size: 3vh;
+  font-weight: 400;
+  height: 10vh;
+}
+.cadastraraltinst{
+  background: transparent;
+  width: 50vh;
+  margin: 2vh 2vh 0 2vh;
+  border-radius: 50vh;
+  border: 3px solid white;
+  color: white;
+  font-size: 3vh;
+  font-weight: 400;
+  height: 10vh;
+}
+/* CSS para os desktops, laptops e tablets*/
+@media screen and (min-width: 1025px) {
+
+
+  /*Página de redirecionamento para usuário ou instituição*/
+
+  .cabecalho{
+    width: 100vh;
+    padding: 4vh 10vh 0 10vh;
+  }
+
+  .logo{
+    width: 21vh;
+    height: 34vh;
+    background: url(../images/logocomescrito.png) center center/20vh no-repeat;
+    font-size: 0;
+  }
+
+  hr{
+    background-color: #2f2f2f;
+    width: 80vh;
+  }
+
+  #gridcad{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 20vh 100vh);
+    grid-template-areas: "userchoose" "btnuser" "instchoose" "btninst";
+  }
+
+  .btninst{
+    text-align: center;
+  }
+
+  .btnuser{
+    text-align: center;
+  }
+
+  .userchoose{
+  }
+
+  .instchoose{
+  }
+
+  .instsugest{
+    font-size: 3vh;
+    text-align: center;
+    margin: 0 10vh 5vh 10vh;
+  }
+
+  .usersugest{
+    text-align: center;
+    font-size: 3vh;
+    height: 1vh;
+    padding-top: 10vh;
+    margin: 0 10vh 0 10vh;
+  }
+}
+/* CSS para celulares grandes*/
+@media screen and (max-width: 1024px) {
+
+  /*Estilo para página de redirecionamento*/
+
+  .cabecalho{
+    width: 100%;
+    padding: 4vh 0 0 0;
+  }
+
+  .logo{
+    width: 20vh;
+    height: 34vh;
+    background: url(../images/logocomescrito.png) center center/20vh no-repeat;
+    font-size: 0;
+  }
+
+  hr{
+    background-color: #2f2f2f;
+    width: 40vh;
+  }
+
+  #gridcad{
+    display: grid;
+    grid-template-rows: 25vh 80vh;
+    grid-template-areas: "btnuser" "userchoose" "instchoose" "btninst";
+  }
+
+  .btninst{
+    text-align: center;
+  }
+
+  .btnuser{
+    text-align: center;
+  }
+
+  .userchoose{
+        padding-top: 15vh;
+  }
+
+  .instchoose{
+    padding-top: 10vh;
+  }
+
+  .instsugest{
+    font-size: 3vh;
+    text-align: center;
+    margin: 0 5vh 5vh 5vh;
+  }
+
+  .usersugest{
+    text-align: center;
+    font-size: 3vh;
+    margin: 0 5vh 5vh 5vh;
+  }
+}
