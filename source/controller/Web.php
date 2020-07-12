@@ -132,7 +132,7 @@ class Web extends Controller
         //quantos tem, quantos mostrar pro pagina, qual a pagina atual, quantos links pra frente e pra tras (1-2-atual-3-4)
         $pager->pager($all->find()->count(), 3, $page, 2);
     
-        $all = $all->find("","","name,address,phone,city,state")->limit($pager->limit())->offset($pager->offset())->fetch(true);
+        $all = $all->find("","","cod_inst,name,address,phone,city,state")->limit($pager->limit())->offset($pager->offset())->fetch(true);
 
         echo $this->view->render('theme1/ListInstitution', [
             "title" => "Todas as Instituições | FRESHR",
@@ -156,6 +156,7 @@ class Web extends Controller
     
         $all = $all->find("","","event_name,
         thumb,
+        cod_event,
         date_begin,
         date_end,
         hour_begin,
@@ -193,19 +194,23 @@ class Web extends Controller
     public function showEvent($data){
 
         $event = new Event();
-        $event = $event->find('cod_event = :c',"c= {$data['id']}");
+        $event = $event->find('cod_event = :c',"c= {$data['id']}")->fetch();
        
 
         echo $this->view->render('theme1/ShowEvent', [
             "title" => "{$event->event_name}| FRESHR",
-            "event" => $event
+            "event" => $event,
         ]);
     }
 
-    public function showInst(){
+    public function showInst($data){
+
+        $inst = new Institution();
+        $inst = $inst->find('cod_inst = :c',"c= {$data['id']}")->fetch();
+
         echo $this->view->render('theme1/ShowInst', [
-            "title" => "Inst | FRESHR",
-            "inst" => $this->inst
+            "title" => "{$inst->inst_name}| FRESHR",
+            "inst" => $inst
         ]);
     }
 

@@ -27,6 +27,7 @@ $router->group('/todos');
 $router->get("/instituições","Web:allInst","web.allInst");
 $router->get("/eventos","Web:allEvent","web.allEvent");
 
+/*SHOW*/
 $router->group(null);
 $router->get("/inst/{id}","Web:showInst","web.showInst");
 $router->get("/event/{id}","Web:showEvent","web.showEvent");

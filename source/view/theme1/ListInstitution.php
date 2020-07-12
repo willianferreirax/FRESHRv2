@@ -35,6 +35,7 @@
       ";
     }
   ?>
+  <?= "<a href={$router->route('web.showInst',['id'=>$inst->cod_inst])}>link</a>"?>
 
   <?= $pager->render()?>
   

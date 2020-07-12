@@ -34,7 +34,7 @@
         ";
       }
     ?>
-    <?= "<a href={$router->route('web.home')}/{$data['id']}>link</a>"?>
+    <?= "<a href={$router->route('web.showEvent',['id'=>$event->cod_event])}>link</a>"?>
 
     <?= $pager->render()?>
   </div>

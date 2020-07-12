@@ -18,7 +18,7 @@
 
     <div class="infos">
       <div class="infos2">
-      <h1 class='desceve'> <?="test2"/*$evento[11]*/?></h1>
+      <h1 class='desceve'> <?="test2"."{$event->event_name}"?></h1>
       <br>
       <h1 class='desceve'><?= "test3"/*$evento[16]*/?></h1>
       <br>
@@ -31,16 +31,7 @@
 
       <h1 class='preco'> 
         Preço: 
-        <?php
-        /*
-        if(isset($event->price) && $event->price != "0"){
-          echo "RS ".$event->price;
-        }
-        else{
-          echo "Grátis";
-        }
-        */
-        ?>
+        
       </h1>
       <br>
 
