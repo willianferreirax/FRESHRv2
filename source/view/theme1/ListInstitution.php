@@ -24,18 +24,16 @@
 
 <div class='elem1'>
  
-  <?php
-    foreach($all as $inst){
-      echo "
-      <p>{$inst->name}</p>
-      <p>{$inst->address}</p>
-      <p>{$inst->phone}</p>
-      <p>{$inst->city}</p>
-      <p>{$inst->state}</p>
-      ";
-    }
-  ?>
-  <?= "<a href={$router->route('web.showInst',['id'=>$inst->cod_inst])}>link</a>"?>
+  <?php foreach($all as $inst){ ?>
+      
+      <p> <?= $inst->name ?></p>
+      <p> <?= $inst->address ?></p>
+      <p> <?= $inst->phone ?></p>
+      <p> <?= $inst->city ?></p>
+      <p> <?= $inst->state ?></p>
+      
+  <?php }?>
+  <a href=<?=$router->route('web.showInst',['id'=>$inst->cod_inst])?>>link</a>
 
   <?= $pager->render()?>
   

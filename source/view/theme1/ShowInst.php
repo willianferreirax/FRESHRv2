@@ -1,3 +1,5 @@
+<?php $v->layout("theme1/_theme"); ?>
+
 <?php $v->start("css"); ?>
   <link rel="stylesheet" href="<?=asset('css/panel_inst.css')?>">
   <link rel="stylesheet" href="<?=asset('css/style.css')?>">
@@ -5,27 +7,30 @@
 <?php $v->end(); ?>
 
   <div class='statsdiv'>
-    <?php
-    echo "<h1 class='imageuser'>".substr($faculdade[0], 0, strlen($faculdade[0]) - (strlen($faculdade[0])-4))."</h1>";
-    ?>
-    <?php
-    echo"<div class='username'>".$faculdade[0]."</div>";
+    <h1 class='imageuser'><?= substr($inst->name, 0, strlen($inst->name) - (strlen($inst->name)-4)) ?></h1>
+    <div class='username'><?= $inst->name ?></div>
 
-    echo"<br><br><div class='useremail'>".$faculdade[6]."</div><br>";
-    echo"<div class='useremail'>Telefone: ".$faculdade[7]."</div>";
-    echo"<div class='useremail'>Endereço: ".$faculdade[1].", ".$faculdade[2].", ".$faculdade[3]." - ".$faculdade[4]."</div>";
-    echo"<div class='useremail'>CEP: ".$faculdade[5]."</div>";
+    <br><br>
+    <div class='useremail'><?= $inst->email ?></div><br>
+    <div class='useremail'>Telefone: <?= $inst->phone ?></div>
+    <div class='useremail'>Endereço: <?= $inst->address.", ".$inst->neighbor.", ".$inst->city." - ".$inst->state ?></div>
+    <div class='useremail'>CEP: <?= $inst->cep ?></div>
 
-    echo "<div class='title'>Eventos atuais</div>";
+    <div class='title'>Eventos
+    
+    <?php foreach($events as $event){ ?>    
+            <div>
+            <p> <?=$event->event_name?> </p>
+            <p> <?=$event->address?> </p>
+            <p> <?=$event->description?> </p>
+            <p> <?=$event->city?> </p>
+            <p> <?=$event->state?> </p>
+            </div>
+
+            <a href=<?=$router->route('web.showEvent',['id'=>$event->cod_event])?>>link</a>
+    <?php } ?>
 
     
-    echo "<div class='title'>Eventos passados</div>";
-    
-  
-    ?>
+    </div>
+     
   </div>
-
-</center>
-
-</body>
-</html>

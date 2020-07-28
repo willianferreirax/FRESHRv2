@@ -183,14 +183,14 @@ class Web extends Controller
         ]);
         
     }
-
+    /*maybe this should not be here, think about it*/
     public function createEvent(){
         echo $this->view->render('theme1/CreateEvent', [
             "title" => "Todos os Eventos | FRESHR",
             "inst" => $this->inst
         ]);
     }
-
+    
     public function showEvent($data){
 
         $event = new Event();
@@ -208,9 +208,13 @@ class Web extends Controller
         $inst = new Institution();
         $inst = $inst->find('cod_inst = :c',"c= {$data['id']}")->fetch();
 
+        $event = new Event();
+        $event = $event->find('cod_inst = :c',"c= {$data['id']}")->fetch(true);
+
         echo $this->view->render('theme1/ShowInst', [
             "title" => "{$inst->inst_name}| FRESHR",
-            "inst" => $inst
+            "inst" => $inst,
+            "events" => $event
         ]);
     }
 

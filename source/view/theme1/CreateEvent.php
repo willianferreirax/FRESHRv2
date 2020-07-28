@@ -49,7 +49,7 @@
           <input class='inputcreate' type='date' name='date_begin' min=<?= date('Y-m-d')?>>
 
           <label class='labelint'>Quando o evento irá <b>acabar</b>?</label><br>
-          <input class='inputcreate' type='date' name='date_end' min=<?= date('d-m-y')?>>>
+          <input class='inputcreate' type='date' name='date_end' min=<?= date('Y-m-d')?>>
 
           <label class='labelint'>Informe o horário que o evento <b>inciará</b>:</label>
           <input class='inputcreate' type='time' name='hour_begin'>
@@ -59,7 +59,7 @@
 
           <label class='labelint'>Qual o <b>preço</b> do evento?</label><br>
           <label for='preco' class='precocifra'>R$</label>
-          <input class='inputcreate' type='tel' id='preco' name='price' placeholder="R$ 12,00" onkeypress="mascara('preco' , window.event.keyCode , 'document.criareventoform.preco'); return blokletras(event);">
+          <input class='inputcreate' type='tel' id='preco' name='price' placeholder="R$ 12,00">
 
         </div>
 

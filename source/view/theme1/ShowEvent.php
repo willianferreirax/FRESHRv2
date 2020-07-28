@@ -12,15 +12,15 @@
 
     <div class="info1">
       <div class="topo">
-        <h1 class="nome"> <?= "test1"/*$event->name*/?></h1>
+        <h1 class="nome">Nome: <?=$event->event_name?></h1>
       </div>
     </div>
 
     <div class="infos">
       <div class="infos2">
-      <h1 class='desceve'> <?="test2"."{$event->event_name}"?></h1>
+      <h1 class='desceve'>Descrição: <?=$event->description?></h1>
       <br>
-      <h1 class='desceve'><?= "test3"/*$evento[16]*/?></h1>
+      <h1 class='desceve'>Detalhes: <?=$event->detail?></h1>
       <br>
       </div>
     </div>
@@ -28,21 +28,19 @@
     <div class="infos3">
       <hr class='linha'>
       <br>
-
       <h1 class='preco'> 
-        Preço: 
-        
+        Preço: <?=$event->price?>
       </h1>
       <br>
 
       <h1 class='dataeve'> 
         Período:<br> 
-        <?= "test4"/*$evento[2] . ", ". $evento[4] . " até<br> " . $evento[2] . ", ".$evento[5]*/?>
+        <?= $event->date_begin . ", ".$event->hour_begin ." até<br> " . $event->date_end . ", ".$event->hour_end?>
       </h1>
       <br>
       
       <h1 class='endereeve'> 
-        <?= "test5"/*$evento[6] . " - " . $evento[8] . ", " . $evento[9]*/ ?> 
+        <?=$event->address . " - " . $event->city . ", " . $event->state?> 
       </h1>
       <br>
     </div>
@@ -50,7 +48,7 @@
       <br>
       <br>
       
-      <a href="listar_eventos.php">
+      <a href= <?=$router->route("web.allEvent")?>>
         <button class='voltar'>Voltar</button>
       </a>
 

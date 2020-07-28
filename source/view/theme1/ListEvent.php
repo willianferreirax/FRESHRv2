@@ -21,20 +21,20 @@
 <center>
   <div class='elem1'>
 
-    <?php
-      foreach($all as $event){
-        echo "
+    <?php foreach($all as $event){ ?>
+        
         <div class='test'>
-        <p>{$event->name}</p>
-        <p>{$event->address}</p>
-        <p>{$event->description}</p>
-        <p>{$event->city}</p>
-        <p>{$event->state}</p>
+          <p> <?=$event->event_name?> </p>
+          <p> <?=$event->address?> </p>
+          <p> <?=$event->description?> </p>
+          <p> <?=$event->city?> </p>
+          <p> <?=$event->state?> </p>
         </div>
-        ";
-      }
-    ?>
-    <?= "<a href={$router->route('web.showEvent',['id'=>$event->cod_event])}>link</a>"?>
+        
+        <a href=<?=$router->route('web.showEvent',['id'=>$event->cod_event])?>>link</a>
+        
+      <?php }?>
+  
 
     <?= $pager->render()?>
   </div>

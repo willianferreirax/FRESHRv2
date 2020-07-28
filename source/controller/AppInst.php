@@ -23,10 +23,14 @@ class AppInst extends Controller{
     }
 
     public function instPanel(){
-        
+
+        $event = new Event();
+        $event = $event->find('cod_inst = :c',"c= {$this->institution->cod_inst}")->fetch(true);
+
         echo $this->view->render('theme1/InstPanel', [
             "title" => "Painel da Instituição | FRESHR",
-            'inst' => $this->institution
+            'inst' => $this->institution,
+            'events' => $event
         ]);
         
     }
@@ -78,20 +82,20 @@ class AppInst extends Controller{
         $event->cod_inst = $_SESSION['inst'];
         $event->tags = json_encode('test');
         $event->visibility = 1;
-        
-        if($_FILES['thumb']){
+        /*
+        if($data['thumb']){
             $event->thumb = "existe";
         }
         else{
             $event->thumb = "arquivo padrao";
         }
-
+        */
         if($data['description'] != ""){
             $event->description = $data['description'];
         }
         
         if($data['detail'] != ""){
-            $event->detail = $data['detail'];
+            $event->details = $data['detail'];
         }
 
         if($data['price'] != ""){

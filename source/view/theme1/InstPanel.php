@@ -10,24 +10,24 @@
 
 <div class='statsdiv'>
 
-  <?="<div class='imageuser'>".substr($inst->name, 0, strlen($inst->name) - (strlen($inst->name)-4))."</div>"?>
+  <div class='imageuser'><?= substr($inst->name, 0, strlen($inst->name) - (strlen($inst->name)-4))?></div>
 
-  <?="<h1 class='username'>Olá, ".$inst->name."</h1>";?>
+  <h1 class='username'>Olá <?= $inst->name ?></h1>
   
   <h2 class='title no-float'>
     Meus Eventos
   </h2>
+  <?php foreach($events as $event){ ?>
 
   <div class='box'>
+    <p> <?=$event->event_name?> </p>
+    <p> <?=$event->address?> </p>
+    <p> <?=$event->description?> </p>
+    <p> <?=$event->city?> </p>
+    <p> <?=$event->state?> </p>
   </div>
 
-  <div class='box'>
-
-  </div>
-  <div class='box'>
-
-  </div>
-  
+  <?php } ?>
 
   <div class='cadastrarevent'>
     <a href=<?=$router->route('web.createEvent')?>>
