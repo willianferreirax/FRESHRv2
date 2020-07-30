@@ -218,4 +218,8 @@ class Web extends Controller
         ]);
     }
 
+    public function Search($data){
+
+    }
+
 }
