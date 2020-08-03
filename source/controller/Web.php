@@ -218,8 +218,27 @@ class Web extends Controller
         ]);
     }
 
-    public function Search($data){
+    public function Search($data):void{
+        $data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);
+        
+        $page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_STRIPPED);
+        $pager = new Paginator($this->router->route('web.search')."?page=");
 
+        if(isset($data['search'])){
+            $all = new Event();
+            $pager->pager($all->find()->count(), 3, $page, 2);
+            $all = $all->find('cod_inst like :c',"c= {$data['search-text']}")->fetch(true);
+            
+            
+        }
+
+        echo $this->view->render('theme1/ListEvent', [
+            "title" => "Pesquisa: {$data['search-text']} | FRESHR",
+            "user" => $this->user,
+            "inst" => $this->inst,
+            "all" => $all,
+            "pager" => $pager,
+        ]);
     }
 
 }

@@ -20,7 +20,7 @@
 
 <center>
   <div class='elem1'>
-
+    <?php var_dump($all)?>
     <?php foreach($all as $event){ ?>
         
         <div class='test'>

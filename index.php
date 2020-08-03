@@ -22,6 +22,11 @@ $router->get("/","Web:cadChoose", "web.cadChoose");//tema 2
 $router->get("/usuario","Web:registerUser", "web.registerUser");//tema 2
 $router->get("/instituição","Web:registerInst", "web.registerInst");//tema 2
 
+/*SEARCH */
+$router->group('pesquisa');
+$router->post('/',"Web:search", "web.search");
+
+
 /*ALL */
 $router->group('/todos');
 $router->get("/instituições","Web:allInst","web.allInst");
@@ -29,8 +34,8 @@ $router->get("/eventos","Web:allEvent","web.allEvent");
 
 /*SHOW*/
 $router->group(null);
-$router->get("/inst/{id}","Web:showInst","web.showInst");
-$router->get("/event/{id}","Web:showEvent","web.showEvent");
+$router->get("/instituicao/{id}","Web:showInst","web.showInst");
+$router->get("/evento/{id}","Web:showEvent","web.showEvent");
 
 /*AUTH */
 $router->group(null);
