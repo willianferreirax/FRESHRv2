@@ -227,8 +227,19 @@ class Web extends Controller
         if(isset($data['search'])){
             $all = new Event();
             $pager->pager($all->find()->count(), 3, $page, 2);
-            $all = $all->find('cod_inst like :c',"c= {$data['search-text']}")->fetch(true);
-            
+
+            $all = $all->find("event_name like :s or
+            date_begin like :s or
+            date_end like :s or
+            hour_begin like :s or
+            hour_end like :s or
+            address like :s or
+            neighbor like :s or
+            city like :s or
+            state like :s or
+            cep like :s or
+            description like :s or
+            details like :s","s={$data['search-text']}")->fetch(true);
             
         }
 
