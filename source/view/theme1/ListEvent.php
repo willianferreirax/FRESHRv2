@@ -29,6 +29,7 @@
           <p> <?=$event->description?> </p>
           <p> <?=$event->city?> </p>
           <p> <?=$event->state?> </p>
+          <p> <?=$event->tags?> </p>
         </div>
         
         <a href=<?=$router->route('web.showEvent',['id'=>$event->cod_event])?>>link</a>

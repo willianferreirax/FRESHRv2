@@ -239,7 +239,8 @@ class Web extends Controller
             state like :s or
             cep like :s or
             description like :s or
-            details like :s","s={$data['search-text']}")->fetch(true);
+            details like :s or
+            cod_inst in (select cod_inst from institutions where institutions.name like :s)","s=%{$data['search-text']}%")->fetch(true);
             
         }
 
