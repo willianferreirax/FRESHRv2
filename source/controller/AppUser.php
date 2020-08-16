@@ -22,10 +22,17 @@ class AppUser extends Controller{
     public function userPanel(){
         
         echo $this->view->render('theme1/UserPanel', [
-            "title" => "Painel da Usuário | FRESHR",
+            "title" => "Painel da Usuário {$this->user->name} | FRESHR",
             'user' => $this->user
         ]);
         
+    }
+
+    public function configUser(){
+        echo $this->view->render('theme1/ConfigUser', [
+            "title" => "Configuração do Usuário | FRESHR",
+            'user' => $this->user
+        ]);
     }
 
     public function logoff():void{
@@ -45,7 +52,13 @@ class AppUser extends Controller{
         }
     }
 
-    public function updateName():void{
+    public function updateName($data):void{
+        $user = new User();
+        $user->findById($_SESSION['user']);
+        $user->name = $data['name'];
 
+        $user->save();
+
+    
     }
 }

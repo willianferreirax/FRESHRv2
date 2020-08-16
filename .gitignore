@@ -3,3 +3,4 @@ vendor/
 exemples/
 .vscode/
 ToFix/
+config.php

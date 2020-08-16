@@ -1,8 +1,8 @@
 <?php $v->layout("theme1/_theme"); ?>
 
 <?php $v->start("css"); ?>
-	<link rel="stylesheet" href="css/config.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="<?=asset('css/config.css')?>">
+	<link rel="stylesheet" href="<?=asset('css/style.css')?>">
 <?php $v->end(); ?>
 
 <?php $v->start("body"); ?>

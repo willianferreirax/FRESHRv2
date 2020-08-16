@@ -35,7 +35,7 @@ class AppInst extends Controller{
         
     }
 
-    public function config(){
+    public function configInst(){
         
         echo $this->view->render('theme1/ConfigInst', [
             "title" => "Configurações | FRESHR",
