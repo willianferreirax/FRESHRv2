@@ -53,12 +53,10 @@ class AppUser extends Controller{
     }
 
     public function updateName($data):void{
-        $user = new User();
-        $user->findById($_SESSION['user']);
-        $user->name = $data['name'];
+        $this->user->name = $data["name"];
 
-        $user->save();
+        $this->user->save();
 
-    
+
     }
 }

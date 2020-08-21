@@ -18,7 +18,7 @@ define("SITE",[
     "desc"  => "Uma visão de prosperidade para sua carreira",
     "domain" => "freshr.com",
     "locale" => "pt-br",
-    "root" => "http://localhost/FRESHRv2/"
+    "root" => "http://localhost/CodigoAberto/FRESHRv2/"
 ]);
 
 define("MAIL",[
@@ -30,5 +30,5 @@ define("MAIL",[
     "from_email" => "willian1948@hotmail.com"
 ]);
 
-define("URL_BASE","http://localhost/FRESHRv2/");
+define("URL_BASE","http://localhost/CodigoAberto/FRESHRv2/");
 ?>

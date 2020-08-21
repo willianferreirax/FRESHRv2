@@ -33,24 +33,46 @@ class User extends DataLayer{
     return true;
   }
 
-  public function validateEmail($object):bool{
+  public function validateEmail():bool{
     
-    if(!filter_var($object->email,FILTER_VALIDATE_EMAIL) || empty($object->email)){
-      $object->fail = new Exception("Informe um email válido");
+    if(empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)){
+      $this->fail = new Exception("Informe um email válido");
       return false;
     }
 
-    $instExist = (new Institution())->find("email= :e","e={$object->email}")->count();
-    $userExist = (new User())->find("email= :e","e={$object->email}")->count();
+    $userByEmail = null;
+    $InstByEmail = null;
 
-    if($instExist || $userExist){
-      $object->fail = new Exception("email já está em uso");
-      
-      return false;
+    if(get_class($this)=="User"){
+      if(!$this->cod_user){
+        $userByEmail = $this->find("email = :email", "email={$this->email}")->count();
+      }
+      else{
+        $userByEmail = $this->find("email = :email AND cod_user != :id", "email={$this->email}&id={$this->cod_user}")->count();
+      }
+
+      if($userByEmail){
+        $this->fail = new Exception("O e-mail informado já está em uso");
+        return false;
+      }
+      return true;
     }
+    else{
+      if(!$this->cod_inst){
+        $InstByEmail = $this->find("email = :email", "email={$this->email}")->count();
+      }
+      else{
+        $InstByEmail = $this->find("email = :email AND cod_inst != :id", "email={$this->email}&id={$this->cod_inst}")->count();
+      }
 
-    return true;
+      if($InstByEmail){
+        $this->fail = new Exception("O e-mail informado já está em uso");
+        return false;
+      }
+      return true;
+    }
   }
+    
 
   public function validatePass($object):bool{
 
