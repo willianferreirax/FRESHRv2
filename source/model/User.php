@@ -20,7 +20,7 @@ class User extends DataLayer{
 
   public function save():bool{
 
-    if(!$this->validateEmail($this) || !$this->validatePass($this)){
+    if(!$this->validateEmail() || !$this->validatePass($this)){
       return false;
     }
 
@@ -33,7 +33,7 @@ class User extends DataLayer{
     return true;
   }
 
-  public function validateEmail():bool{
+  protected function validateEmail():bool{
     
     if(empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)){
       $this->fail = new Exception("Informe um email válido");
@@ -41,36 +41,22 @@ class User extends DataLayer{
     }
 
     $userByEmail = null;
-    $InstByEmail = null;
-
-    if(get_class($this)=="User"){
-      if(!$this->cod_user){
-        $userByEmail = $this->find("email = :email", "email={$this->email}")->count();
-      }
-      else{
-        $userByEmail = $this->find("email = :email AND cod_user != :id", "email={$this->email}&id={$this->cod_user}")->count();
-      }
-
-      if($userByEmail){
-        $this->fail = new Exception("O e-mail informado já está em uso");
-        return false;
-      }
-      return true;
+    $instByEmail = null;
+  
+    if(!$this->cod_user){
+      $userByEmail = $this->find("email = :email", "email={$this->email}")->count();
     }
     else{
-      if(!$this->cod_inst){
-        $InstByEmail = $this->find("email = :email", "email={$this->email}")->count();
-      }
-      else{
-        $InstByEmail = $this->find("email = :email AND cod_inst != :id", "email={$this->email}&id={$this->cod_inst}")->count();
-      }
-
-      if($InstByEmail){
-        $this->fail = new Exception("O e-mail informado já está em uso");
-        return false;
-      }
-      return true;
+      $userByEmail = $this->find("email = :email AND cod_user != :id", "email={$this->email}&id={$this->cod_user}")->count();
+      $instByEmail = (new Institution())->find("email = :email","email={$this->email}")->count();
     }
+
+    if($userByEmail || $instByEmail){
+      $this->fail = new Exception("O e-mail informado já está em uso1");
+      return false;
+    }
+    return true;
+    
   }
     
 

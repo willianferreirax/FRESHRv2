@@ -48,8 +48,10 @@ $router->post('/divulgue',"Auth:registerInst","auth.registerInst");
 $router->group('usuario');
 $router->get('/',"AppUser:userPanel", "appUser.userPanel");//tema 3
 $router->get('/sair','AppUser:logoff','appUser.logoff');
+
+/*CONFIG USER*/
 $router->get('/config','AppUser:configUser','appUser.configUser');
-$router->post('/update','AppUser:updateName','appUser.updateName');
+$router->post('/update','AppUser:update','appUser.update');
 
 /**PROFILE INST*/
 $router->group('/instituicao');
@@ -57,6 +59,8 @@ $router->get("/","AppInst:instPanel","appInst.instPanel");//tema 3
 $router->get("/evento","Web:createEvent","web.createEvent");
 $router->post("/evento","AppInst:createEvent","appInst.createEvent");
 $router->get('/sair','AppInst:logoff','appInst.logoff');
+
+/*CONFIG USER*/
 $router->get('/config','AppInst:configInst','appInst.configInst');
 
 /**

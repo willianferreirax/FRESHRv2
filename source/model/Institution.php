@@ -26,7 +26,7 @@ class Institution extends DataLayer{
   }
 
   public function save():bool{
-    if(!User::validateEmail($this) || !User::validatePass($this)){
+    if(!$this->validateEmail() || !User::validatePass($this)){
       return false;
     }
 
@@ -87,6 +87,32 @@ class Institution extends DataLayer{
         $this->CNPJ = $cnpj;
         return true;
     endif;
+  }
+
+  protected function validateEmail():bool{
+    
+    if(empty($this->email) || !filter_var($this->email, FILTER_VALIDATE_EMAIL)){
+      $this->fail = new Exception("Informe um email válido");
+      return false;
+    }
+
+    $userByEmail = null;
+    $instByEmail = null;
+  
+    if(!$this->cod_inst){
+      $instByEmail = $this->find("email = :email", "email={$this->email}")->count();
+    }
+    else{
+      $instByEmail = $this->find("email = :email AND cod_inst != :id", "email={$this->email}&id={$this->cod_inst}")->count();
+      $userByEmail = (new User())->find("email = :email","email={$this->email}")->count();
+    }
+
+    if($userByEmail || $instByEmail){
+      $this->fail = new Exception("O e-mail informado já está em uso1");
+      return false;
+    }
+    return true;
+    
   }
 
 }

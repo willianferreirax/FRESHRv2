@@ -12,36 +12,39 @@
 
 <div class='statsdiv'>
 	<h1 class='title'>Minhas informações</h1>
-	<form name="config" method="POST" action="<?=$router->route("appUser.updateName")?>">
-
+	<form name="config" method="POST" action="<?=$router->route("appUser.update")?>">
+		<!-- NOME -->
 		<label><b>Nome:</b></label>
+		<input type="text" name="name"  value="">
 
-		<input type="text" name="name" value="">
+		<label><b>Sobrenome:</b></label>
+		<input type='text' name='last_name' placeholder='Novo Sobrenome'>
 		
-		<input class="cadastrar" type="submit" value="Alterar">
-
-<!-- 
+		<input class="cadastrar" type="submit" name="update_name" value="alterar">
+		<br>
+		<!-- EMAIL -->
 		<label><b>Email:</b></label>
-		
-		<input type="text" name="email" value='' disabled>
-		
-		<input class="cadastrar" type="submit" name="email_usu" value="Alterar">
-		
-		
-
+		<input type="text" name="email" placeholder="Novo email">
+	
+		<input class="cadastrar" type="submit" name="update_email" value="Alterar">
+		<br>	
+		<!-- SENHA -->
 		<label><b>Senha:</b></label>
+		<input type="password" name="pass" placeholder="Nova senha">
+
+		<label><b>Confirmar senha:</b></label>
+		<input type='password' name='confirm' placeholder='Repita a nova senha'>
 		
-		<input type="password" name="senha" value='' disabled>
 		
-		<input class="cadastrar" type="submit" name="senha_usu" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_pass" value="Alterar">
 		
-		 -->
+		
 		<!-- DELETAR CONTA -->
 		<a style="color: red; text-decoration: none !important;" href="javascript: if(confirm('Deseja realmente excluir sua conta? Essa ação é irreversivel!')) location.href='deletar_cadastro.php';">
 			<div class="excluircad"><i class="far fa-trash-alt"></i>Excluir cadastro</div>
 		<a>
 		
 		<!-- Voltar -->
-		<button class="cadastraralt" href="painel_inst.php">Voltar</button>
+		<button class="cadastraralt" href="<?=$router->route("appUser.userPanel")?>">Voltar</button>
 	</form>
 </div>

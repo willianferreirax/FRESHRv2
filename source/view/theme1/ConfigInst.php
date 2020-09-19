@@ -13,71 +13,94 @@
 <div class='statsdiv'>
 	<h1 class='title'>Minhas informações</h1>
 
-	<form name="config" method="POST" action="alterar_inst.php">
+	<form name="config" method="POST" action="">
 				
-
+		<!-- name -->
 		<label><b>Nome:</b></label>
+		<input type="text" name="name" value="" placeholder="Novo nome">
 		
-		<input type="text" name="nome" value="" disabled>
+		<input class="cadastrar" type="submit" name="update_name" value="Alterar">
 		
-		<input class="cadastrar" type="submit" name="nome_inst" value="Alterar">
-		
-
+		<!-- phone -->
 		<label><b>Telefone:</b></label>
+		<input type="text" name="phone" placeholder="Novo telefone" value="">
 		
-		<input type="text" name="telefone" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="telefone_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_phone" value="Alterar">
 		
 
 		<label><b>Endereço:</b></label>
+		<input type="text" name="address" placeholder="Novo endereço" value="">
 		
-		<input type="text" name="endereco" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="endereco_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_address" value="Alterar">
 
 
 		<label><b>Bairro:</b></label>
+		<input type="text" name="neighbor" placeholder="Novo bairro" value="">
 		
-		<input type="text" name="bairro" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="bairro_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_neighbor" value="Alterar">
 
 
 		<label><b>Cidade:</b></label>
+		<input type="text" name="city" placeholder="Nova cidade" value="">
 		
-		<input type="text" name="cidade" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="cidade_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_city" value="Alterar">
 		
 		
-
 		<label><b>Estado:</b></label>
+        <br>
+			<select name='estado_inst'>
+				<option value='AC'>Acre</option>
+				<option value='AL'>Alagoas</option>
+				<option value='AP'>Amapá</option>
+				<option value='AM'>Amazonas</option>
+				<option value='BA'>Bahia</option>
+				<option value='CE'>Ceará</option>
+				<option value='DF'>Distrito Federal</option>
+				<option value='ES'>Espirito Santo</option>
+				<option value='GO'>Goiás</option>
+				<option value='MA'>Maranhão</option>
+				<option value='MT'>Mato Grosso</option>
+				<option value='MS'>Mato Grosso do Sul</option>
+				<option value='MG'>Minas Gerais</option>
+				<option value='PA'>Pará</option>
+				<option value='PB'>Paraíba</option>
+				<option value='PR'>Paraná</option>
+				<option value='PE'>Pernambuco</option>
+				<option value='PI'>Piauí</option>
+				<option value='RJ'>Rio de Janeiro</option>
+				<option value='RJ'>Rio Grande do Norte</option>
+				<option value='RS'>Rio grande do Sul</option>
+				<option value='RO'>Rondônia</option>
+				<option value='RR'>Roraima</option>
+				<option value='SC'>Santa Catarina</option>
+				<option value='SP' selected>São Paulo</option>
+				<option value='SE'>Sergipe</option>
+				<option value='TO'>Tocantins</option>
+			</select>
+		<br>
 		
-		<input type="text" name="estado" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="estado_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_state" value="Alterar">
 		
 
 		<label><b>CEP:</b></label>
+		<input type="text" name="cep" placeholder="Novo CEP" value="">
 		
-		<input type="text" name="cep" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="cep_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_CEP" value="Alterar">
 		
 
 		<label><b>Email:</b></label>
+		<input type="text" name="email" placeholder="Novo Email" value="">
 		
-		<input type="text" name="email" value="" disabled>
-		
-		<input class="cadastrar" type="submit" name="email_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_email" value="Alterar">
 		
 
 		<label><b>Senha:</b></label>
+		<input type="password" name="pass" placeholder="Nova senha" value=''>
+
+		<label><b>Confirmar senha:</b></label>
+		<input type='password' name='confirm' placeholder='Repita a nova senha'>
 		
-		<input type="password" name="senha" value='' disabled>
-		
-		<input class="cadastrar" type="submit" name="senha_inst" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_pass" value="Alterar">
 		
 		
 		<a style="color: red; text-decoration: none !important;" href="javascript: if(confirm('Deseja realmente excluir sua conta? Essa ação é irreversivel!')) location.href='deletar_cadastro.php';">
