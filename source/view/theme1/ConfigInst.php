@@ -48,7 +48,7 @@
 		
 		<label><b>Estado:</b></label>
         <br>
-			<select name='estado_inst'>
+			<select name='state'>
 				<option value='AC'>Acre</option>
 				<option value='AL'>Alagoas</option>
 				<option value='AP'>Amapá</option>
