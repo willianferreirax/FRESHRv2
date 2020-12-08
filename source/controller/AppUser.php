@@ -58,17 +58,17 @@ class AppUser extends Controller{
 
         if(isset($_POST['update_name'])){
 
-            if(!isset($data["name"])){
-                echo $this->ajaxResponse("message",[
-                    'type' => 'error',
-                    'message' => "Informe o novo nome"
+            if(!isset($data["name"]) || $data["name"] == ""){
+                echo $this->ajaxResponse("alert",[
+                    "type" => 'error',
+                    "message" => "Informe o novo nome"
                 ]);
                 return;
             }
 
             $this->user->name = $data["name"];
 
-            if(isset($data["last_name"])){
+            if(isset($data["last_name"]) && $data["last_name"]!= ""){
                 $this->user->last_name = $data["last_name"];
             }
             
@@ -82,7 +82,7 @@ class AppUser extends Controller{
             else{
                 echo $this->ajaxResponse("message",[
                     'type' => 'error',
-                    'message' => $user->fail->getMessage()
+                    'message' => $this->user->fail->getMessage()
                 ]);
                 return;
             }
@@ -110,7 +110,7 @@ class AppUser extends Controller{
             else{
                 echo $this->ajaxResponse("message",[
                     'type' => 'error',
-                    'message' => $user->fail->getMessage()
+                    'message' => $this->user->fail->getMessage()
                 ]);
                 return;
             }
@@ -128,8 +128,8 @@ class AppUser extends Controller{
 
             if(!isset($data["confirm"])){
                 echo $this->ajaxResponse("message",[
-                    'type' => 'error',
-                    'message' => "Confirme a nova senha"
+                    "type" => 'error',
+                    "message" => "Confirme a nova senha"
                 ]);
                 return;
             }
@@ -153,7 +153,7 @@ class AppUser extends Controller{
             else{
                 echo $this->ajaxResponse("message",[
                     'type' => 'error',
-                    'message' => $user->fail->getMessage()
+                    'message' => $this->user->fail->getMessage()
                 ]);
                 return;
             }

@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="./source/assets/css/style.min.css">
 <?php $v->end(); ?>
 
-<form class="form" action="<?=$router->route("auth.login") ?>" method="post">
+<form  action="<?=$router->route("auth.login") ?>" method="post">
 
     <div class="login_form_callback">
-        <? $flash;?>
+        
     </div>
     
     <p><label>Email</label></p>

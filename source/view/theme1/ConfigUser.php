@@ -1,22 +1,33 @@
 <?php $v->layout("theme1/_theme"); ?>
 
 <?php $v->start("css"); ?>
+	<link rel="stylesheet" href="./source/assets/css/index.css">
 	<link rel="stylesheet" href="<?=asset('css/config.css')?>">
-	<link rel="stylesheet" href="<?=asset('css/style.css')?>">
+	<link rel="stylesheet" href="<?=asset('css/style.min.css')?>">
 <?php $v->end(); ?>
 
 <?php $v->start("body"); ?>
 	<body class='background'>
 <?php $v->end(); ?>
 
+<?php $v->start("scripts"); ?>
+	<script src="<?=asset('js/form.js')?>"></script>
+	<script src="<?=asset('js/jquery.js')?>"></script>
+<?php $v->end(); ?>
 
 <div class='statsdiv'>
 	<h1 class='title'>Minhas informações</h1>
-	<form name="config" method="POST" action="<?=$router->route("appUser.update")?>">
+	
+	<form class="form" method="post" action="<?=$router->route("appUser.update")?>">
+
+		<div class="login_form_callback">
+			<? $flash;?>
+		</div>
+
 		<!-- NOME -->
 		<label><b>Nome:</b></label>
 		<input type="text" name="name"  value="">
-
+		
 		<label><b>Sobrenome:</b></label>
 		<input type='text' name='last_name' placeholder='Novo Sobrenome'>
 		
@@ -45,6 +56,7 @@
 		<a>
 		
 		<!-- Voltar -->
-		<button class="cadastraralt" href="<?=$router->route("appUser.userPanel")?>">Voltar</button>
+		
 	</form>
+	<button class="cadastraralt" href="<?=$router->route("appUser.userPanel")?>">Voltar</button>
 </div>

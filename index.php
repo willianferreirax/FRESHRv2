@@ -52,6 +52,7 @@ $router->get('/sair','AppUser:logoff','appUser.logoff');
 /*CONFIG USER*/
 $router->get('/config','AppUser:configUser','appUser.configUser');
 $router->post('/update','AppUser:update','appUser.update');
+$router->delete("/delete/{id}","AppUser:delete","appUser.delete");
 
 /**PROFILE INST*/
 $router->group('/instituicao');

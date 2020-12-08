@@ -126,7 +126,7 @@
             }
         ?>
 
-        <p><a href='config.php' class='account'>Configurações</a></p>      
+        <p><a href="<?=$router->route("appUser.configUser") ?>" class='account'>Configurações</a></p>      
 
         <p><a href="<?=$router->route("web.help") ?>" class='account'>Ajuda</a></p>
 

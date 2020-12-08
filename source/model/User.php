@@ -19,19 +19,30 @@ class User extends DataLayer{
   }
 
   public function save():bool{
+    if(empty($this->cod_user)){
+      //create
+      if(!$this->validateEmail() || !$this->validatePass($this)){
+        return false;
+      }
+      
+      $this->passwd = password_hash($this->passwd, PASSWORD_DEFAULT);
 
-    if(!$this->validateEmail() || !$this->validatePass($this)){
-      return false;
+      if(!parent::save()){
+        return false;
+      }
+
+      return true;
     }
+    else{
+      //update
+      if(!parent::save()){
+        return false;
+      }
 
-    $this->passwd = password_hash($this->passwd, PASSWORD_DEFAULT);
-
-    if(!parent::save()){
-      return false;
+      return true;
     }
-
-    return true;
   }
+    
 
   protected function validateEmail():bool{
     
