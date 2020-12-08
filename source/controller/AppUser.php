@@ -59,8 +59,8 @@ class AppUser extends Controller{
         if(isset($_POST['update_name'])){
 
             if(!isset($data["name"]) || $data["name"] == ""){
-                echo $this->ajaxResponse("alert",[
-                    "type" => 'error',
+                echo $this->ajaxResponse("message",[
+                    "type" => "message",
                     "message" => "Informe o novo nome"
                 ]);
                 return;
