@@ -102,6 +102,55 @@ class Web extends Controller
         
     }
 
+    public function forget():void{
+        $head = $this->seo->optimize(
+            "Recupere sua senha |". site('name'),
+            site("desc"),
+            $this->router->route('web.forget'),
+            routeImage('forget')
+        )->render();
+
+        echo $this->view->render('theme1/Forget', [
+            'head' => $head
+        ]);
+    }
+
+    public function reset($data):void{
+
+        if(empty($_SESSION["forget"])){
+            flash("info","Informe seu E-MAIL para recuperar a senha");
+            $this->router->redirect("web.forget");
+        }
+
+        $email = filter_var($data["email"], FILTER_VALIDATE_EMAIL);
+        $forget = filter_var($data["forget"], FILTER_DEFAULT);
+        
+        $errForget = "Não foi possivel recuperar, tente novamente";
+
+        if(!$email|| !$forget){
+            flash("error", $errForget);
+            $this->router->redirect("web.forget");
+        }
+
+        $user = (new User())->find("email = :e AND forget = :f", "e={$email}&f={$forget}");
+
+        if(!$user){
+            flash("error", $errForget);
+            $this->router->redirect("web.forget");
+        }
+
+        $head = $this->seo->optimize(
+            "Crie sua nova senha |". site('name'),
+            site("desc"),
+            $this->router->route('web.reset'),
+            routeImage('reset')
+        )->render();
+
+        echo $this->view->render('theme1/Reset', [
+            'head' => $head
+        ]);
+    }
+
     public function help(){
         
         echo $this->view->render('theme1/Help', [

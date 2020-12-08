@@ -22,6 +22,9 @@ $router->get("/","Web:cadChoose", "web.cadChoose");//tema 2
 $router->get("/usuario","Web:registerUser", "web.registerUser");//tema 2
 $router->get("/instituição","Web:registerInst", "web.registerInst");//tema 2
 
+$router->get('/recuperar', 'Web:forget', 'web.forget');//não bloqueia vc nao estar logado
+$router->get('/senha/{email}/{forget}', 'Web:reset', 'web.reset');
+
 /*SEARCH */
 $router->group('pesquisa');
 $router->post('/',"Web:search", "web.search");
@@ -42,6 +45,9 @@ $router->group(null);
 $router->post('/login',"Auth:login", "auth.login");
 $router->post('/cadastre-se',"Auth:registerUser", "auth.registerUser");
 $router->post('/divulgue',"Auth:registerInst","auth.registerInst");
+
+$router->post("/forget", "Auth:forget", "auth.forget");
+$router->post("/reset", "Auth:reset", "auth.reset");
 
 
 /**PROFILE USER*/

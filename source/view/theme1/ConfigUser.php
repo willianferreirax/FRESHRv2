@@ -42,13 +42,7 @@
 		<br>	
 
 		<!-- SENHA -->
-		<label><b>Senha:</b></label>
-		<input type="password" name="pass" placeholder="Nova senha">
-
-		<label><b>Confirmar senha:</b></label>
-		<input type='password' name='confirm' placeholder='Repita a nova senha'>
-		
-		<input class="cadastrar" type="submit" name="update_pass" value="Alterar">
+		<button class="cadastraralt" href="<?=$router->route("web.forget")?>">Alterar senha</button>
 		
 		<!-- DELETAR CONTA -->
 		<a style="color: red; text-decoration: none !important;" href="javascript: if(confirm('Deseja realmente excluir sua conta? Essa ação é irreversivel!')) location.href='deletar_cadastro.php';">
