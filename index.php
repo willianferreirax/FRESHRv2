@@ -67,9 +67,9 @@ $router->get("/evento","Web:createEvent","web.createEvent");
 $router->post("/evento","AppInst:createEvent","appInst.createEvent");
 $router->get('/sair','AppInst:logoff','appInst.logoff');
 
-/*CONFIG USER*/
+/*CONFIG INST*/
 $router->get('/config','AppInst:configInst','appInst.configInst');
-
+$router->post('/update','AppInst:update','appInst.update');
 /**
  * ERROR
  */

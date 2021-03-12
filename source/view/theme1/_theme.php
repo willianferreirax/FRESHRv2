@@ -126,7 +126,15 @@
             }
         ?>
 
-        <p><a href="<?=$router->route("appUser.configUser") ?>" class='account'>Configurações</a></p>      
+        <?php
+            if(isset($_SESSION['inst'])){
+                echo "<p><a href=".$router->route("appInst.configInst")." class='account'>Configurações</a></p>";
+            }
+            if(isset($_SESSION['user'])){
+                echo "<p><a href=".$router->route("appUser.configUser")." class='account'>Configurações</a></p>";
+            }
+        ?>
+          
 
         <p><a href="<?=$router->route("web.help") ?>" class='account'>Ajuda</a></p>
 

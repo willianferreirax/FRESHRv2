@@ -4,10 +4,6 @@
   <link rel="stylesheet" href="<?=asset('css/sobre.css')?>">
 <?php $v->end(); ?>
 
-<?php unset($_SESSION['user']);
-unset($_SESSION['inst']);
-?>
-
 <center>
   <div class='content'>
     <div class='textos'>

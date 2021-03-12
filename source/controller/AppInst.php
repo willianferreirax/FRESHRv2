@@ -136,7 +136,9 @@ class AppInst extends Controller{
     }
 
     public function update($data):void{
+        
         if(isset($_POST['update_name'])){
+            echo "aaa";
             if(!isset($data["name"])){
                 echo $this->ajaxResponse("message",[
                     'type' => 'error',
@@ -158,6 +160,8 @@ class AppInst extends Controller{
                     'type' => 'error',
                     'message' => $institution->fail->getMessage()
                 ]);
+
+                echo $institution->fail->getMessage();
                 return;
             }
         }
@@ -215,7 +219,7 @@ class AppInst extends Controller{
         }
 
         if(isset($_POST['update_neighbor'])){
-            if(!isset($data["neightbor"])){
+            if(!isset($data["neighbor"])){
                 echo $this->ajaxResponse("message",[
                     'type' => 'error',
                     'message' => "Informe o novo bairro"

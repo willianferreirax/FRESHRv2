@@ -26,23 +26,34 @@ class Institution extends DataLayer{
   }
 
   public function save():bool{
-    if(!$this->validateEmail() || !User::validatePass($this)){
-      return false;
+    if(empty($this->cod_inst)){
+      //create
+      if(!$this->validateEmail() || !User::validatePass($this)){
+        return false;
+      }
+
+      $this->passwd = password_hash($this->passwd, PASSWORD_DEFAULT);
+      
+      if(!$this->validateCep($this)){
+        return false;
+      }
+
+      $this->cep = str_replace("-","",$this->cep);
+
+      if(!$this->validatePhone($this->phone) ||!$this->validateCNPJ($this->CNPJ) || !parent::save()){
+        return false;
+      }
+
+      return true;
     }
+    else{
+      //update
+      if(!parent::save()){
+        return false;
+      }
 
-    $this->passwd = password_hash($this->passwd, PASSWORD_DEFAULT);
-    
-    if(!$this->validateCep($this)){
-      return false;
+      return true;
     }
-
-    $this->cep = str_replace("-","",$this->cep);
-
-    if(!$this->validatePhone($this->phone) ||!$this->validateCNPJ($this->CNPJ) || !parent::save()){
-      return false;
-    }
-
-    return true;
   }
 
   public function validateCep($object):bool{

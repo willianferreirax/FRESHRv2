@@ -13,41 +13,41 @@
 <div class='statsdiv'>
 	<h1 class='title'>Minhas informações</h1>
 
-	<form name="config" method="POST" action="">
+	<form name="config" method="POST" action="<?=$router->route("appInst.update")?>">
 				
 		<!-- name -->
 		<label><b>Nome:</b></label>
 		<input type="text" name="name" value="" placeholder="Novo nome">
 		
-		<input class="cadastrar" type="submit" name="update_name" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_name" value="Alterar"><br>
 		
 		<!-- phone -->
 		<label><b>Telefone:</b></label>
 		<input type="text" name="phone" placeholder="Novo telefone" value="">
 		
-		<input class="cadastrar" type="submit" name="update_phone" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_phone" value="Alterar"><br>
 		
-
+		<!-- adress -->
 		<label><b>Endereço:</b></label>
 		<input type="text" name="address" placeholder="Novo endereço" value="">
 		
-		<input class="cadastrar" type="submit" name="update_address" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_address" value="Alterar"><br>
 
-
+		<!-- neighbor -->
 		<label><b>Bairro:</b></label>
 		<input type="text" name="neighbor" placeholder="Novo bairro" value="">
 		
-		<input class="cadastrar" type="submit" name="update_neighbor" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_neighbor" value="Alterar"><br>
 
-
+		<!-- city -->
 		<label><b>Cidade:</b></label>
 		<input type="text" name="city" placeholder="Nova cidade" value="">
 		
-		<input class="cadastrar" type="submit" name="update_city" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_city" value="Alterar"><br>
 		
-		
+		<!-- state -->
 		<label><b>Estado:</b></label>
-        <br>
+        
 			<select name='state'>
 				<option value='AC'>Acre</option>
 				<option value='AL'>Alagoas</option>
@@ -77,30 +77,30 @@
 				<option value='SE'>Sergipe</option>
 				<option value='TO'>Tocantins</option>
 			</select>
-		<br>
 		
-		<input class="cadastrar" type="submit" name="update_state" value="Alterar">
 		
-
+		<input class="cadastrar" type="submit" name="update_state" value="Alterar"><br>
+		
+		<!-- cep -->
 		<label><b>CEP:</b></label>
 		<input type="text" name="cep" placeholder="Novo CEP" value="">
 		
-		<input class="cadastrar" type="submit" name="update_CEP" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_CEP" value="Alterar"><br>
 		
-
+		<!-- email -->
 		<label><b>Email:</b></label>
 		<input type="text" name="email" placeholder="Novo Email" value="">
 		
-		<input class="cadastrar" type="submit" name="update_email" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_email" value="Alterar"><br>
 		
-
+		<!-- password -->
 		<label><b>Senha:</b></label>
 		<input type="password" name="pass" placeholder="Nova senha" value=''>
 
 		<label><b>Confirmar senha:</b></label>
 		<input type='password' name='confirm' placeholder='Repita a nova senha'>
 		
-		<input class="cadastrar" type="submit" name="update_pass" value="Alterar">
+		<input class="cadastrar" type="submit" name="update_pass" value="Alterar"><br>
 		
 		
 		<a style="color: red; text-decoration: none !important;" href="javascript: if(confirm('Deseja realmente excluir sua conta? Essa ação é irreversivel!')) location.href='deletar_cadastro.php';">
@@ -108,7 +108,7 @@
 		</a>
 		
 
-		<button class="cadastraralt" href="painel_inst.php">Voltar</button>
+		<button class="cadastraralt" href="<?=$router->route("appUser.instPanel")?>">Voltar</button>
 
 	</form>
 </div>
