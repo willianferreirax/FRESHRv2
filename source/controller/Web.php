@@ -277,7 +277,10 @@ class Web extends Controller
             $all = new Event();
             $pager->pager($all->find()->count(), 3, $page, 2);
 
-            $all = $all->find("event_name like :s or
+            
+            $search = $data['search-text'];
+
+            $eventos = $all->find("event_name like :s or
             date_begin like :s or
             date_end like :s or
             hour_begin like :s or
@@ -289,9 +292,16 @@ class Web extends Controller
             cep like :s or
             description like :s or
             details like :s or
-            cod_inst in (select cod_inst from institutions where institutions.name like :s)","s=%{$data['search-text']}%")->fetch(true);
+            cod_inst in (select cod_inst from institutions where institutions.name like :s)",
+            "s={$data['search-text']}")->limit($pager->limit())->offset($pager->offset())->fetch(true);
+
+            if($all->fail()){
+                echo "cu";
+                echo $all->fail()->getMessage();;
+            }
             
         }
+        //cod_inst in (select cod_inst from institutions where institutions.name like :s)
 
         echo $this->view->render('theme1/ListEvent', [
             "title" => "Pesquisa: {$data['search-text']} | FRESHR",

@@ -21,7 +21,9 @@
 <center>
   <div class='elem1'>
   
-    <?php foreach($all as $event){ ?>
+    <?php 
+    var_dump($all);
+    foreach($all as $event){ ?>
         
         <div class='test'>
           <p> <?=$event->event_name?> </p>

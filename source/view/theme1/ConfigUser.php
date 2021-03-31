@@ -11,7 +11,7 @@
 <?php $v->end(); ?>
 
 <?php $v->start("scripts"); ?>
-	<script src="<?='a'//asset('js/form.js')?>"></script>
+	<script src="<?=asset('js/form.js')?>"></script>
 	<script src="<?=asset('js/jquery.js')?>"></script>
 <?php $v->end(); ?>
 

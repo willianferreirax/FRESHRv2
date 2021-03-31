@@ -57,13 +57,17 @@ class AppUser extends Controller{
         $data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);
 
         if(isset($_POST['update_name'])){
-
-            if(!isset($data["name"]) || $data["name"] == ""){
+            $a = true;
+            if($a || $data["name"] == ""){
                 echo $this->ajaxResponse("message",[
                     "type" => "message",
                     "message" => "Informe o novo nome"
                 ]);
+                $this->ajaxResponse("redirect",[
+                    "url" => $this->router->route("appUser.configUser")
+                ]);
                 return;
+                
             }
 
             $this->user->name = $data["name"];
@@ -73,11 +77,14 @@ class AppUser extends Controller{
             }
             
             if($this->user->save()){
-                echo $this->ajaxResponse("message",[
+                $this->ajaxResponse("message",[
                     'type' => 'message',
                     'message' => "Nome alterado com sucesso"
                 ]);
-                return;
+;
+
+                
+                
             }
             else{
                 echo $this->ajaxResponse("message",[
